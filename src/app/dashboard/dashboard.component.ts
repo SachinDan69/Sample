@@ -1,18 +1,17 @@
-import { ApiService } from './services/api.service';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { DialogComponent } from './../dialog/dialog.component';
+import { ApiService } from './../services/api.service';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { DialogComponent } from './dialog/dialog.component';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss']
 })
-export class AppComponent implements OnInit{
-  title = 'ng_crud';
+export class DashboardComponent implements OnInit {
 
   displayedColumns: string[] = ['empName', 'department', 'date', 'status', 'experience', 'comment', 'action'];
   dataSource!: MatTableDataSource<any>;
@@ -20,7 +19,8 @@ export class AppComponent implements OnInit{
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private dialog: MatDialog, private api : ApiService) {}
+  constructor(private dialog: MatDialog, private api : ApiService) { }
+
   ngOnInit(): void {
     this.getAllUsers();
   }

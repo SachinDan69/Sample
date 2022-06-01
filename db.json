@@ -1,0 +1,50 @@
+{
+  "userList": [
+    {
+      "empName": "Sachin",
+      "department": "Sales",
+      "date": "2022-04-17T18:30:00.000Z",
+      "status": "Trainee",
+      "experience": 3,
+      "comment": "Sales Training",
+      "id": 1
+    },
+    {
+      "empName": "Dhananjaya",
+      "department": "HR",
+      "date": "2022-04-24T18:30:00.000Z",
+      "status": "Associate",
+      "experience": 2,
+      "comment": "HRM Training",
+      "id": 2
+    },
+    {
+      "empName": "Kamal",
+      "department": "Marketing",
+      "date": "2022-03-01T18:30:00.000Z",
+      "status": "Senior",
+      "experience": 1,
+      "comment": "Marketing Training",
+      "id": 3
+    }
+  ],
+  "signupUsers": [
+    {
+      "username": "Sachin Samarasinghe",
+      "email": "sakchins@ymail.com",
+      "password": "ng_crud",
+      "contact": 715139049,
+      "id": 1
+    },
+    {
+      "username": "Dhananjaya Samarasinghe",
+      "email": "sachindan69@gmail.com",
+      "password": "123456",
+      "contact": 712126461,
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

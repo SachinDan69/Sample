@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Sign Up</h1>
+                    <h4></h4>
+                </div>
+                <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input formControlName="username" type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Username">
+                            <span class="text-danger" *ngIf="signupForm.controls['username'].dirty && signupForm.hasError('required','username')">*Username is required</span>
+                          </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
+                            <span class="text-danger" *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')">*Password is required</span>
+                        </div>
+                        <div class="mb-3">
+                          <label for="email" class="form-label">Email</label>
+                          <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email">
+                          <span class="text-danger" *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required','email')">*Email is required</span>  
+                        </div>
+                        <div class="mb-3">
+                            <label for="contact" class="form-label">Contact No</label>
+                            <input formControlName="contact" type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter Contact No">
+                            <span class="text-danger" *ngIf="signupForm.controls['contact'].dirty && signupForm.hasError('required','contact')">*Contact no is required</span>
+                          </div>
+                        <button type="submit" [disabled]="!signupForm.valid" class="btn btn-primary">Sign Up</button>
+                </form>
+                <br>
+                <a style="color: #fff; text-decoration: none;" routerLink="/login">Already Registered?</a>
+            </div>
+        </div>
+    </div>
+</div>
